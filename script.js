@@ -1,4 +1,5 @@
-
+let userscore=0;
+let cpscore=0 
 function game(){
     
     let interval;
@@ -81,26 +82,31 @@ function compare(x,y){
     let z1,z2,z3;
     let status;
     if(x==="paper" && y==="rock"){
-        z1 = "You picked: " + x ;
-        z2 = "\nComputer picked: " + y;
+        userscore++;
+        z1 = "You picked (Score="+userscore+"): " + x ;
+        z2 = "\nComputer picked (Score="+cpscore+"): " + y;
         z3= "\nYou win";
         status =1;
-    }else if(x==="rock" && y==="scissor"){
        
-        z1 = "You picked: " + x ;
-        z2 = "\nComputer picked: " + y;
+    }else if(x==="rock" && y==="scissor"){
+        userscore++;
+        z1 = "You picked (Score="+userscore+"): " + x ;
+        z2 = "\nComputer picked (Score="+cpscore+"): " + y;
         z3= "\nYou win";
         status =1;
+       
     }else if(x==="scissor" && y==="paper"){
     
-        z1 = "You picked: " + x ;
-        z2 = "\nComputer picked: " + y;
+        userscore++;
+        z1 = "You picked (Score="+userscore+"): " + x ;
+        z2 = "\nComputer picked (Score="+cpscore+"): " + y;
         z3= "\nYou win";
         status =1;
+       
     }else if(x===y){
        
-        z1 = "You picked: " + x ;
-        z2 = "\nComputer picked: " + y;
+        z1 = "You picked (Score="+userscore+"): " + x ;
+        z2 = "\nComputer picked (Score="+cpscore+"): " + y;
         z3= "\nDraw";
         status =-1;
     }else if(x==="invalid"){
@@ -109,10 +115,12 @@ function compare(x,y){
         z2 = "";
         z3 = "";
     }else{
-        z1 = "You picked: " + x ;
-        z2 = "\nComputer picked: " + y;
+        cpscore++;
+        z1 = "You picked (Score="+userscore+"): " + x ;
+        z2 = "\nComputer picked (Score="+cpscore+"): " + y;
         z3= "\nComputer wins";
         status =0;
+        
     }
     document.getElementById("result").innerHTML = z1;
     document.getElementById("result2").innerHTML = z2;
