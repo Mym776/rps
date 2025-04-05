@@ -5,8 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>rps</title>
+    <script src="script.js"></script>
 </head>
-<body>
+<body id="body">
+    <div class="title">
+        <h1>Welcome to rock paper scissors</h1>
+    </div>
+    
+    <div class="instruction">
+        <h2>Pick your choice</h2>
+        <div class="expand">
+            <p>1. Rock</p>
+            <p>2. Paper</p>
+            <p>3. Scissor</p>    
+        </div>
+    </div>
+    <div class="choice">
+        <h3 >Your choice</h3>
+        <button onclick="game()">Pick</button>
+    </div>
+    
+    
+    <div class="results">
+        <h2 id="result"></h2>
+        <h2 id="result2"></h2>
+       
+    </div>
+    <div class="final">
+        <h2 id="result3"></h2>
+    </div>
     
 </body>
 </html>
